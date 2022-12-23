@@ -280,8 +280,8 @@ help_string_telegraph_user = f'''
 '''
 
 help_user = telegraph.create_page(
-    title=f"FLASH ALLEN",
-    content=help_string_telegraph_user)[""]
+    title=f"{config_dict['TITLE_NAME']} Help",
+    content=help_string_telegraph_user)["path"]
 
 help_string_telegraph_admin = f'''
 <b><u>🛡️ Admin Commands</u></b>
@@ -310,18 +310,18 @@ help_string_telegraph_admin = f'''
 '''
 
 help_admin = telegraph.create_page(
-    title=f"ITZ_STARKBOT",
-    content=help_string_telegraph_admin)[""]
+    title=f"{config_dict['TITLE_NAME']} Help",
+    content=help_string_telegraph_admin)["path"]
 
 
 def bot_help(update, context):
     button = ButtonMaker()
     if config_dict['EMOJI_THEME']:
-        button.buildbutton("👤 User", f"https://telegra.ph/{help_user}")
-        button.buildbutton("🛡️ Admin", f"https://telegra.ph/{help_admin}")
+        button.buildbutton("👤 User", f"")
+        button.buildbutton("🛡️ Admin", f"")
     else:
-        button.buildbutton("User", f"https://telegra.ph/{help_user}")
-        button.buildbutton("Admin", f"https://telegra.ph/{help_admin}")
+        button.buildbutton("User", f"")
+        button.buildbutton("Admin", f"")
     sendMarkup(help_string, context.bot, update.message, button.build_menu(2))
 
 
