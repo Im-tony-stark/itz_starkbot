@@ -203,7 +203,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/weebzone/WZML'>WeebZone</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b>ITZ_STARK_BOT</b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -280,8 +280,8 @@ help_string_telegraph_user = f'''
 '''
 
 help_user = telegraph.create_page(
-    title=f"{config_dict['TITLE_NAME']} Help",
-    content=help_string_telegraph_user)["path"]
+    title=f"FLASH ALLEN",
+    content=help_string_telegraph_user)[""]
 
 help_string_telegraph_admin = f'''
 <b><u>🛡️ Admin Commands</u></b>
@@ -310,8 +310,8 @@ help_string_telegraph_admin = f'''
 '''
 
 help_admin = telegraph.create_page(
-    title=f"{config_dict['TITLE_NAME']} Help",
-    content=help_string_telegraph_admin)["path"]
+    title=f"ITZ_STARKBOT",
+    content=help_string_telegraph_admin)[""]
 
 
 def bot_help(update, context):
