@@ -84,6 +84,7 @@ def stats(update, context):
                     f'<b>├ 🖥️ CPU:</b> [{progress_bar(cpuUsage)}] {cpuUsage}%\n'\
                     f'<b>├ 🎮 RAM:</b> [{progress_bar(mem_p)}] {mem_p}%\n'\
                     f'<b>├ 💾 Disk:</b> [{progress_bar(disk)}] {disk}%\n'\
+                    f'<b>├ Coded by :</b> Flash Allen </b>\n'\
                     f'<b>├ 💿 Disk Free:</b> {free}\n'\
                     f'<b>├ 🔺 Upload Data:</b> {sent}\n'\
                     f'<b>╰ 🔻 Download Data:</b> {recv}\n\n'
@@ -96,6 +97,7 @@ def stats(update, context):
                     f'<b>├  CPU:</b> [{progress_bar(cpuUsage)}] {cpuUsage}%\n'\
                     f'<b>├  RAM:</b> [{progress_bar(mem_p)}] {mem_p}%\n'\
                     f'<b>├  Disk:</b> [{progress_bar(disk)}] {disk}%\n'\
+                    f'<b>├ Coded by :</b> Flash Allen </b>\n'\
                     f'<b>├  Disk Free:</b> {free}\n'\
                     f'<b>├  Upload Data:</b> {sent}\n'\
                     f'<b>╰  Download Data:</b> {recv}\n\n'
@@ -125,6 +127,7 @@ def stats(update, context):
                      f'<b>├ 🧲 Torrent/Direct: </b>{torrent_direct}\n'\
                      f'<b>├ 🔐 Zip/Unzip: </b>{zip_unzip}\n'\
                      f'<b>├ 🔷 Leech: </b>{leech_limit}\n'\
+                     f'<b>├ Coded by :</b> Flash Allen </b>\n'\
                      f'<b>├ ♻️ Clone: </b>{clone_limit}\n'\
                      f'<b>├ 🔰 Mega: </b>{mega_limit}\n'\
                      f'<b>├ 💣 Total Tasks: </b>{total_task}\n'\
@@ -134,6 +137,7 @@ def stats(update, context):
                      f'<b>├  Torrent/Direct: </b>{torrent_direct}\n'\
                      f'<b>├  Zip/Unzip: </b>{zip_unzip}\n'\
                      f'<b>├  Leech: </b>{leech_limit}\n'\
+                     f'<b>├ Coded by :</b> Flash Allen </b>\n'\
                      f'<b>├  Clone: </b>{clone_limit}\n'\
                      f'<b>├  Mega: </b>{mega_limit}\n'\
                      f'<b>├  Total Tasks: </b>{total_task}\n'\
@@ -162,7 +166,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else:
             sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        text = f"Not Authorized user, deploy your own mirror bot"
+        text = f"Not Authorized user, Deploy your own or contact admin"
         if PICS:
             sendPhoto(text, context.bot, update.message, rchoice(PICS), reply_markup)
         else:
@@ -203,7 +207,7 @@ def log(update, context):
 
 
 help_string = '''
-<b>ITZ_STARK_BOT</b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b>>ITZ_STARK_BOT</b> - The Ultimate Telegram Mirror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -276,12 +280,12 @@ help_string_telegraph_user = f'''
 <br><br>
 • <b>/{BotCommands.SpeedCommand[0]}</b>: Speedtest of server
 <br><br>
-• <b>/weebhelp</b>: Okatu helper
+• <b>/starkhelp</b>: Stark helper
 '''
 
 help_user = telegraph.create_page(
     title=f"{config_dict['TITLE_NAME']} Help",
-    content=help_string_telegraph_user)["path"]
+    content=help_string_telegraph_user)["User-12-23"]
 
 help_string_telegraph_admin = f'''
 <b><u>🛡️ Admin Commands</u></b>
@@ -311,17 +315,17 @@ help_string_telegraph_admin = f'''
 
 help_admin = telegraph.create_page(
     title=f"{config_dict['TITLE_NAME']} Help",
-    content=help_string_telegraph_admin)["path"]
+    content=help_string_telegraph_admin)["Admin-12-23"]
 
 
 def bot_help(update, context):
     button = ButtonMaker()
     if config_dict['EMOJI_THEME']:
-        button.buildbutton("👤 User", f"")
-        button.buildbutton("🛡️ Admin", f"")
+        button.buildbutton("👤 User", f"https://telegra.ph/{help_user}")
+        button.buildbutton("🛡️ Admin", f"https://telegra.ph/{help_admin}")
     else:
-        button.buildbutton("User", f"")
-        button.buildbutton("Admin", f"")
+        button.buildbutton("User", f"https://telegra.ph/{help_user}")
+        button.buildbutton("Admin", f"https://telegra.ph/{help_admin}")
     sendMarkup(help_string, context.bot, update.message, button.build_menu(2))
 
 
