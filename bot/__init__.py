@@ -140,7 +140,7 @@ if not ospath.isdir(path):
     mkdir(path)
 photo_dir = path + TGH_THUMB.split('/')[-1]
 urlretrieve(TGH_THUMB, photo_dir)
-Image.open(photo_dir).convert("RGB").save('Thumbnails/weeb.jpg', "JPEG")
+Image.open(photo_dir).convert("RGB").save('', "JPEG")
 osremove(photo_dir)
 
 AUTHORIZED_CHATS = environ.get('AUTHORIZED_CHATS', '')
@@ -444,14 +444,14 @@ SHOW_LIMITS_IN_STATS = SHOW_LIMITS_IN_STATS.lower() == 'true'
 START_BTN1_NAME = environ.get('START_BTN1_NAME', '')
 START_BTN1_URL = environ.get('START_BTN1_URL', '')
 if len(START_BTN1_NAME) == 0 or len(START_BTN1_URL) == 0:
-    START_BTN1_NAME = 'Master'
-    START_BTN1_URL = 'https://t.me/krn_adhikari'
+    START_BTN1_NAME = 'Main'
+    START_BTN1_URL = 'https://t.me/itzstark'
 
 START_BTN2_NAME = environ.get('START_BTN2_NAME', '')
 START_BTN2_URL = environ.get('START_BTN2_URL', '')
 if len(START_BTN2_NAME) == 0 or len(START_BTN2_URL) == 0:
     START_BTN2_NAME = 'Support Group'
-    START_BTN2_URL = 'https://t.me/WeebZone_updates'
+    START_BTN2_URL = 'https://t.me/itzstarkup'
 
 BUTTON_FOUR_NAME = environ.get('BUTTON_FOUR_NAME', '')
 BUTTON_FOUR_URL = environ.get('BUTTON_FOUR_URL', '')
@@ -518,11 +518,11 @@ if len(laravel_session) == 0:
 
 MIRROR_LOG_URL = environ.get('MIRROR_LOG_URL', '')
 if len(MIRROR_LOG_URL) == 0:
-    MIRROR_LOG_URL = ''
+    MIRROR_LOG_URL = 'https://t.me/itzstarkupdates'
 
 LEECH_LOG_URL = environ.get('LEECH_LOG_URL', '')
 if len(LEECH_LOG_URL) == 0:
-    LEECH_LOG_URL = ''
+    LEECH_LOG_URL = 'https://t.me/itzstarkupdates'
 
 TIME_GAP = environ.get('TIME_GAP', '')
 if len(TIME_GAP) == 0:
@@ -532,23 +532,23 @@ else:
 
 AUTHOR_NAME = environ.get('AUTHOR_NAME', '')
 if len(AUTHOR_NAME) == 0:
-    AUTHOR_NAME = 'WZML'
+    AUTHOR_NAME = 'ITZ_STARK_BOT'
 
 AUTHOR_URL = environ.get('AUTHOR_URL', '')
 if len(AUTHOR_URL) == 0:
-    AUTHOR_URL = 'https://t.me/WeebZone_updates'
+    AUTHOR_URL = 'https://t.me/itzstark'
 
 TITLE_NAME = environ.get('TITLE_NAME', '')
 if len(TITLE_NAME) == 0:
-    TITLE_NAME = 'WeebZone'
+    TITLE_NAME = 'ITZ_STARK_BOT'
 
 GD_INFO = environ.get('GD_INFO', '')
 if len(GD_INFO) == 0:
-    GD_INFO = 'Uploaded by WeebZone Mirror Bot'
+    GD_INFO = 'Uploaded by itzstark Mirror Bot'
 
 CREDIT_NAME = environ.get('CREDIT_NAME', '')
 if len(CREDIT_NAME) == 0:
-    CREDIT_NAME = 'WeebZone'
+    CREDIT_NAME = 'ITZ_STARK_BOT'
 
 NAME_FONT = environ.get('NAME_FONT', '')
 if len(NAME_FONT) == 0:
@@ -573,15 +573,15 @@ if len(MULTI_WORKING_PROGRESS_STR) != 7:
 
 CHANNEL_USERNAME = environ.get('CHANNEL_USERNAME', '')
 if len(CHANNEL_USERNAME) == 0:
-    CHANNEL_USERNAME = 'WeebZone_updates'
+    CHANNEL_USERNAME = 'itzstarkupdates'
 
 FSUB_CHANNEL_ID = environ.get('FSUB_CHANNEL_ID', '')
 if len(FSUB_CHANNEL_ID) == 0:
-    FSUB_CHANNEL_ID = '-1001512307861'
+    FSUB_CHANNEL_ID = '1874721235'
 
 IMAGE_URL = environ.get('IMAGE_URL', '')
 if len(IMAGE_URL) == 0:
-    IMAGE_URL = 'https://graph.org/file/6b22ef7b8a733c5131d3f.jpg'
+    IMAGE_URL = ''
 
 TIMEZONE = environ.get('TIMEZONE', '')
 if len(TIMEZONE) == 0:
@@ -631,11 +631,11 @@ if len(BASE_URL) == 0:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-   UPSTREAM_REPO = 'https://github.com/weebzone/WZML'
+   UPSTREAM_REPO = 'https://github.com/Im-tony-stark/itz_starkbot'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = 'master'
+    UPSTREAM_BRANCH = 'heroku'
 
 UPDATE_PACKAGES = environ.get('UPDATE_PACKAGES', '')
 if len(UPDATE_PACKAGES) == 0:
